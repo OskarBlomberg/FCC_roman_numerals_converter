@@ -29,17 +29,22 @@ body {
   align-items: center;
 }
 
-.input-container {
-  height: 10rem;
-  width: 38rem;
-  color: #222;
+.input-container,
+.output-container {
   background-color: hsl(34, 78%, 91%);
   border: 10px outset hsl(34, 78%, 95%);
+  color: #222;
+  margin: 1rem;
 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.input-container {
+  height: 10rem;
+  width: 38rem;
 }
 
 .input-container__f&b {
@@ -53,4 +58,13 @@ button {
   height: 2rem;
   width: 6rem;
   font: inherit;
+}
+
+.output-container {
+  height: 5rem;
+  width: 38rem;
+}
+
+.hidden {
+  display: none;
 }
