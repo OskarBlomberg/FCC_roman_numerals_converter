@@ -5,17 +5,25 @@ const output = document.getElementById("output");
 let roman = "";
 let arabicArr = [];
 
-convertBtn.addEventListener("click", () => {
+const checkAndConvert = () => {
   outputContainer.classList.remove("hidden");
-  if (!inputField.value.trim()) {
+  if (!inputField.value) {
     output.textContent = "Please enter a valid number";
-  } else if (inputField.value.trim() < 1) {
+  } else if (inputField.value < 1) {
     output.textContent = "Please enter a number greater than or equal to 1";
-  } else if (inputField.value.trim() > 3999) {
+  } else if (inputField.value > 3999) {
     output.textContent = "Please enter a number less than or equal to 3999";
   } else {
     setPositions(inputField.value);
     makeRoman(arabicArr);
+  }
+};
+
+convertBtn.addEventListener("click", checkAndConvert);
+
+inputField.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    checkAndConvert();
   }
 });
 
@@ -89,5 +97,5 @@ const makeRoman = (arabicArr) => {
       }
     }
   }
-  console.log(roman);
+  output.innerText = roman;
 };

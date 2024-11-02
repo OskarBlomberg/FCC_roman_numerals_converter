@@ -10,6 +10,12 @@ h1 {
   font-size: 2rem;
 }
 
+p,
+input,
+button {
+  font-size: 1.3rem;
+}
+
 body {
   min-height: 100vh;
   width: 100%;
@@ -57,7 +63,15 @@ input,
 button {
   height: 2rem;
   width: 6rem;
-  font: inherit;
+  font-family: inherit;
+}
+
+input {
+  padding-left: 0.9rem;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .output-container {
