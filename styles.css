@@ -7,7 +7,8 @@
 }
 
 h1 {
-  font-size: 2rem;
+  margin: 0 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 p,
@@ -41,6 +42,7 @@ body {
   border: 10px outset hsl(34, 78%, 95%);
   color: #222;
   margin: 1rem;
+  text-align: center;
 
   display: flex;
   flex-direction: column;
@@ -50,7 +52,7 @@ body {
 
 .input-container {
   height: 10rem;
-  width: 38rem;
+  max-width: 38rem;
 }
 
 .input-container__f&b {
@@ -76,7 +78,7 @@ button:hover {
 
 .output-container {
   height: 5rem;
-  width: 38rem;
+  max-width: 38rem;
 }
 
 .hidden {
